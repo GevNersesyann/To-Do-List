@@ -1,4 +1,11 @@
 document.getElementById("add").addEventListener("click", addToDo);
+document
+  .getElementById("todo-input")
+  .addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      addToDo();
+    }
+  });
 
 function addToDo() {
   const ul = document.getElementById("todo-list");
